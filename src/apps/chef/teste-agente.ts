@@ -7,8 +7,13 @@ const resultado = await agent.invoke(
             role: "user", content: "Tenho abóbora em casa. O que posso cozinhar?"
         }]
     },
-    { configurable: { thread_id: "teste-agente" } },
+    { 
+        configurable: { thread_id: "teste-agente" } ,
+        context: { userId: "user-1", plan: "free" },
+    },
+
 );
+
 
 console.log("--- Resposta final ---");
 console.log(resultado.messages.at(-1)?.text);

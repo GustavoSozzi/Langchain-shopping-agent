@@ -17,3 +17,4 @@ const card = await extrator.invoke([
 ]);
 console.log(JSON.stringify(card, null, 2));
 console.log(`\n${card.titulo} — ${card.porcoes} porções — ${card.tempoMinutos} min`);
+

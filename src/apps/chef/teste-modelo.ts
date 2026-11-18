@@ -2,7 +2,7 @@ import "dotenv/config";
 import { HumanMessage, SystemMessage, initChatModel } from "langchain";
 
 const model = await initChatModel(process.env.MODEL!, {
-    temperature: 0.7,
+    temperature: 0.7, // nivel de aleatoriedade -> maiores valores: maior aleatoriedade e criatividade
     maxTokens: 500,
 });
 const resposta = await model.invoke([
